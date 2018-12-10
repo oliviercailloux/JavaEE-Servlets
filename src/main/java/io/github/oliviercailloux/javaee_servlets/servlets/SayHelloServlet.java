@@ -22,6 +22,6 @@ public class SayHelloServlet extends HttpServlet {
 		resp.setLocale(Locale.ENGLISH);
 		@SuppressWarnings("resource")
 		final ServletOutputStream out = resp.getOutputStream();
-		out.println("Hello, world.");
+		out.println("Hé.");
 	}
 }
