@@ -1,11 +1,11 @@
 package io.github.oliviercailloux.javaee_servlets.servlets;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +21,7 @@ public class SayHelloServlet extends HttpServlet {
 		resp.setContentType(MediaType.TEXT_PLAIN);
 		resp.setLocale(Locale.ENGLISH);
 		@SuppressWarnings("resource")
-		final ServletOutputStream out = resp.getOutputStream();
+		final PrintWriter out = resp.getWriter();
 		out.println("Hé.");
 	}
 }
